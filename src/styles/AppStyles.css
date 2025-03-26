@@ -1,0 +1,218 @@
+/* BookMyShow App General Styles */
+
+/* Body and root element styling */
+body,
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dc3545;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c82333;
+}
+
+/* General app styles */
+body {
+  font-family: "Roboto", "Segoe UI", sans-serif;
+  color: #333;
+  background-color: #f8f9fa;
+  padding-top: 0;
+}
+
+/* BookMyShow Red color utility classes */
+.bg-bms-red {
+  background-color: #dc3545 !important;
+}
+
+.text-bms-red {
+  color: #dc3545 !important;
+}
+
+.border-bms-red {
+  border-color: #dc3545 !important;
+}
+
+/* Custom shadows */
+.shadow-sm {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Button customizations */
+.btn-danger,
+.btn-outline-danger {
+  border-radius: 4px;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Link styling */
+a {
+  color: #dc3545;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c82333;
+  text-decoration: underline;
+}
+
+/* Page container padding */
+.page-container {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+/* Page heading styles */
+.page-title {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Section dividers */
+.section-divider {
+  margin: 2rem 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Badge customizations */
+.badge {
+  font-weight: 500;
+  padding: 0.4em 0.7em;
+}
+
+/* Responsive iframe container */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Prevent overflow in containers */
+.container,
+.container-fluid {
+  overflow-x: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Ensure images don't cause overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Navbar related styles */
+.navbar.fixed-top {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1030;
+}
+
+/* Profile dropdown icon styling */
+.profile-dropdown .dropdown-toggle::after {
+  display: none;
+}
+
+.profile-dropdown .dropdown-toggle {
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.profile-dropdown .dropdown-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #dc3545;
+}
+
+.profile-dropdown .dropdown-menu {
+  position: absolute !important;
+  min-width: 200px;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  transform: translate3d(0px, 38px, 0px) !important;
+  inset: auto auto auto auto !important;
+  right: 0 !important;
+  left: auto !important;
+  top: 100% !important;
+  z-index: 1031 !important;
+  float: right;
+  margin-top: 0.5rem;
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+}
+
+.profile-dropdown .dropdown-item {
+  padding: 0.6rem 1rem;
+  color: #333;
+}
+
+.profile-dropdown .dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #dc3545;
+}
+
+.profile-dropdown .dropdown-item i {
+  color: #dc3545;
+}
+
+/* Book Now button on navbar */
+.navbar .btn-danger {
+  font-weight: 600 !important;
+  padding: 0.4rem 1rem;
+  white-space: nowrap;
+}
